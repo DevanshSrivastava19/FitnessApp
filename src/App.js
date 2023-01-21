@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import styled from 'styled-components';
+import Header from './components/Header.js';
+import Card1 from './Card1';
+import Card2 from './Card2';
+import Services from './Services';
+import HomeWorkout from './components/Illustrations/HomeWorkout.js';
+import HealthTips from './components/Illustrations/HealthTips.js';
+import Footer from './components/Illustrations/Footer.js';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header />
+      <Card1/>
+      <Card2 />
+      <Services />
+      <HomeWorkout/>
+      <HealthTips/>
+      <Footer />
+    </AppContainer>
   );
 }
-
+const AppContainer=styled.div`
+  text-align: center;
+  background-color: #FFFFFF;
+`;
 export default App;
